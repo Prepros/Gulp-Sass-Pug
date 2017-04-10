@@ -1,6 +1,20 @@
-p {
-    color: grey;
-    display: block;
-    border: 22px solid;
+// Initialize var
+// --------------------------------------------------------------------------
 
-}
+@import 'var';
+
+
+// Core
+// --------------------------------------------------------------------------
+
+@import 'core/mixins';
+@import 'core/fonts';
+@import 'core/normalize';
+@import 'core/bem';
+@import 'core/smart-grid';
+
+
+// Templates
+// --------------------------------------------------------------------------
+
+@import 'templates/layout';

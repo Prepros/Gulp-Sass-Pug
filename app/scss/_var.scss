@@ -1,0 +1,49 @@
+// Colours
+// --------------------------------------------------------------------------
+
+$white: 							                	#fff;
+$white-light: 							            #fefeff;
+$black: 								                #000;
+$blue:                                  rgb(58,61,92);
+$dark-blue:                             rgb(48,50,70);
+$yellow:                                #ffc13d;
+$light-yellow:                          #fff6d7;
+$orange:                                #ff4e00;
+$grey:                                  #999999;
+$dark-grey:                             #525468;
+$light-grey:                            #f3f3f3;
+
+// Fonts
+// --------------------------------------------------------------------------
+
+$font-body:                             sans-serif;
+$font-heading:                          sans-serif;
+$line-height-heading:                   1;
+$base-font-size: 						            16px;
+
+
+// Semantic Grid
+// --------------------------------------------------------------------------
+
+$grid-num-columns:                      12;
+$grid-width-columns:                    60;
+$grid-width-gutter:                     20;
+$grid-full-width-pixels:                $grid-width-columns * $grid-num-columns + $grid-width-gutter * $grid-num-columns;
+$spacing:                               1em;
+
+
+// Box Sizing Grid
+// --------------------------------------------------------------------------
+
+$container-width:                       960px;
+$column-width:                          80px;
+$gutter:                                20px;
+
+
+// Easing
+// --------------------------------------------------------------------------
+
+$bezier-slow-in:                        0.17,0.67,0.83,0.67;
+// --------------------------------------------------------------------------
+
+$video-height:                          400px;
