@@ -1,0 +1,72 @@
+// Rems with fallback
+// --------------------------------------------------------------------------
+
+@function calcrem($size)
+	@return ($size / 16px) * 1rem
+
+=font-size($size)
+	font-size: $size
+	font-size: calcrem($size)
+
+
+// Inputs
+// --------------------------------------------------------------------------
+
+=placeholder
+  @include _bourbon-deprecate-for-prefixing("placeholder")
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input"
+  @each $placeholder in $placeholders
+    &:#{$placeholder}-placeholder
+      @content
+
+
+// Шрифты
+// --------------------------------------------------------------------------
+
+// Taken from: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+=font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+  @font-face
+    font-family: $font-family
+    font-weight: $weight
+    font-style: $style
+
+    @if $asset-pipeline == true
+      src: font-url('#{$file-path}.eot')
+      src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+            font-url('#{$file-path}.woff') format('woff'),
+            font-url('#{$file-path}.ttf') format('truetype'),
+            font-url('#{$file-path}.svg##{$font-family}') format('svg')
+    @else
+      src: url('#{$file-path}.eot')
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$file-path}.woff') format('woff'),
+      url('#{$file-path}.ttf') format('truetype'),
+      url('#{$file-path}.svg##{$font-family}') format('svg')
+
+
+=breakpoint($value, $size: max)
+  @media screen and (#{$size}-width: $value)
+    @content
+
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+=clearfix()
+  &:before,
+  &:after
+    content: " " // 1
+    display: table // 2
+  &:after
+    clear: both

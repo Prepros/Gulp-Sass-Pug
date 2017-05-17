@@ -2,6 +2,19 @@ mixin head(title)
   head
     meta(charset='utf-8')
     title= title
-    meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel='stylesheet' href='./styles/main.css')
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+
+    meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    link(rel='stylesheet' href='/assets/styles/main.css')
