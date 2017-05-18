@@ -1,15 +1,53 @@
 doctype html
 html
 	include includes/_head
-	+head('Главная страница')
+	+head('Стартовый шаблон')
 	body
 		div.wrapper
 			// Шапка
-			include includes/_header
-			
+			include includes/_header			
 
 			// Контент
-			
+			div.container
+				div.row
+					div.col-md-4.block.block--left
+						h2.text-center Bootstrap
+						div.text-content
+							div.text-center
+								img(src="assets/images/bootstrap.png", alt="")
+							p.
+								 Для консерваторов используется адаптивная сетка #[span='Bootstrap']. Для тех кто привык верстать на #[u='float\'ах'].
+						div.text-center
+							a(class='btn btn--revers', href="http://getbootstrap.com/css/#grid", target='_blank') Ознакомиться
+					div.col-md-4.block.block--center
+						h1.text-center Стартовый шаблон
+						p.text-small для быстрой адаптивной верстки
+						div.text-content
+							p Данная сборка содержит:
+							div.row
+								div.col-md-5
+									ol
+										li: a(href='http://gulpjs.com/', target='_blank') Gulp
+										li: a(href='https://pugjs.org/api/getting-started.html', target='_blank') Pug
+										li: a(href='http://sass-lang.com/', target='_blank') Sass
+								div.col-md-7
+									ol(start='4')
+										li: a(href='https://autoprefixer.github.io/ru', target='_blank') Autoprefixer
+										li: a(href='https://github.com/imagemin/imagemin', target='_blank') Imagemin
+										li: a(href='https://www.browsersync.io/', target='_blank') Browser Sync
+							div.text-center
+								p и многое другое...
+						div.text-center
+							a(class='btn btn--default', href="https://github.com/Prepros/Gulp-Sass-Pug/archive/master.zip" download) Скачать шаблон
+							p.text-small v.1.0.0
+					div.col-md-4.block.block--right
+						h2.text-center UiKit
+						div.text-content
+							div.text-center
+								img(src="assets/images/uikit.png", alt="")
+							p Для модернистов встроена адаптивная сетка #[span='UiKit']. Для тех кто перешел на #[u='flex\'ы']. 
+						div.text-center
+							a(class='btn btn--revers', href="https://getuikit.com/docs/grid", target='_blank') Ознакомиться
 
 		// Подвал
 		include includes/_footer

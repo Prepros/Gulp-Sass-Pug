@@ -1,16 +1,16 @@
-$grid-columns:          12 !default
-$grid-gutter-width:     30px !default
+$grid-columns:          $columns !default
+$grid-gutter-width:     $gutter !default
 
-$screen-sm:             768px !default
-$screen-md:             992px !default
-$screen-lg:             1200px !default
+$screen-sm:             $breakpoint--sm !default
+$screen-md:             $breakpoint--md !default
+$screen-lg:             $breakpoint--lg !default
 
 
 // Small screen / tablet     
-$container-sm:          (720px + $grid-gutter-width) !default
+$container-sm:          ($container--sm + $grid-gutter-width) !default
 
 // Medium screen / desktop   
-$container-md:          (940px + $grid-gutter-width) !default
+$container-md:          ($container--md + $grid-gutter-width) !default
 
 // Large screen / wide desktop
-$container-lg:          (1140px + $grid-gutter-width) !default
+$container-lg:          ($container--lg + $grid-gutter-width) !default

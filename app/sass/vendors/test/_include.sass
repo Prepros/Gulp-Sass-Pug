@@ -1,0 +1,106 @@
+$accent: #0271D1
+
+a
+  color: $accent
+  text-decoration: underline
+
+  &:hover
+    text-decoration: none
+
+ol
+  padding-left: 20px
+
+  li
+    padding-left: 10px
+
+u,span
+  font-weight: 500
+
+span
+  font-weight: 500
+  color: $accent
+
+u
+  padding: 0 5px
+  background: #f7f7f7
+
+img
+  max-width: 80px
+
+
+.block
+  margin: 80px 0
+  padding: 30px 50px
+
+  font-weight: 300
+
+  background: #fff 
+  border: 1px solid #c0c0c0
+  border-radius: 5px
+  box-shadow: 0 10px 20px #ccc
+
+  &--left,
+  &--right
+    margin-top: 130px
+
+  &--left
+    border-radius: 5px 0 0 5px
+    border-right: none
+
+  &--right
+    border-radius: 0 5px 5px 0
+    border-left: none
+
+  &--center
+    margin-bottom: 0
+    padding: 60px 60px 30px
+
+    text-align: justify
+
+    h1
+      margin-bottom: 12px
+      line-height: 1
+      text-transform: uppercase
+
+.text-center
+  margin-bottom: 30px
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-small
+  font-size: 14px
+  text-align: center
+
+.text-content
+  margin: 40px 0
+
+.btn
+  display: inline-block
+  padding: 15px 50px
+
+  text-decoration: none
+
+  border-radius: 10px
+  
+
+  &--default
+    color: $white
+    background: $accent
+    border: 1px solid transparent
+
+    &:hover
+      color: $accent
+      background: $white
+      border: 1px solid $accent
+
+  &--revers
+    color: $accent
+    background: $white
+    border: 1px solid $accent
+
+    &:hover
+      color: $white
+      background: $accent
+      border: 1px solid transparent
