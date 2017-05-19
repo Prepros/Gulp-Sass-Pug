@@ -37,7 +37,7 @@ gulp.task('pug', function () {
 
 // Компиляция Sass в CSS файл
 gulp.task('sass', function () {
-  return gulp.src('app/sass/**/*.sass')
+  return gulp.src('app/sass/**/*.+(sass|scss)')
     // Значения: nested, expanded, compact, compressed
     .pipe(plumber())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
